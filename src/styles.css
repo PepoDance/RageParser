@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/semantic-ui/dist/semantic.min.css";
+
+body {
+  background: #283048;
+  background: -webkit-linear-gradient(to right, #283048, #859398);
+  background: linear-gradient(to right, #283048, #859398);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.ui.menu .item img.logo {
+  margin-right: 1.5em;
+}
+
+.nav-item {
+  min-width: 140px;
+}
+
+.parser {
+  margin-top: 2em !important;
+}
+
+#chatOutput {
+  height: 600px;
+  overflow-y: scroll;
+}
+
+#chatOutput::-webkit-scrollbar {
+  width: 1%;
+  background-color: #F5F5F5;
+}
+
+#chatOutput::-webkit-scrollbar-track {
+  width: 1%;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+#chatOutput::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #555;
+}
+
+/* .ui.action.input input[type="file"] {
+  display: none;
+} */
