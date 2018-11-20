@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 /* @import "~bootstrap/dist/css/bootstrap.css"; */
+@import "https://cdn.jsdelivr.net/npm/fomantic-ui-css@2.6.4/semantic.min.css";
 
 body {
   background: #283048;
@@ -10,11 +11,11 @@ body {
 }
 
 .ui.menu .item img.logo {
-  margin-right: 1.5em;
+  margin-right: 1.5em !important;
 }
 
 .nav-item {
-  min-width: 140px;
+  min-width: 140px !important;
 }
 
 .parser {
@@ -44,7 +45,3 @@ body {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
   background-color: #555;
 }
-
-/* .ui.action.input input[type="file"] {
-  display: none;
-} */
