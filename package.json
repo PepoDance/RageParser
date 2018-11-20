@@ -28,7 +28,8 @@
     "html2canvas": "^1.0.0-alpha.12",
     "jquery": "^3.3.1",
     "rxjs": "~6.3.3",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "ng2-semantic-ui": "^0.9.7"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",
