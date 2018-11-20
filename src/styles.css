@@ -24,7 +24,6 @@ body {
 #chatOutput {
   height: 600px;
   overflow-y: scroll;
-  text-align: left;
 }
 
 #chatOutput::-webkit-scrollbar {
