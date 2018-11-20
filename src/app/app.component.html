@@ -48,7 +48,7 @@
           </h2>
         </div>
       </div>
-      <div *ngIf="chatlog.length > 0">
+      <div *ngIf="chatlog.length > 0" class="left floated content">
 
         <li *ngFor="let chat of chatlog">
           <div [innerHTML]="chat.text | safeHtml">

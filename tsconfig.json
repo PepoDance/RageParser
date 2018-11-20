@@ -15,8 +15,8 @@
     ],
     "types": [
       "node",
-      "jquery",
-      "semantic-ui"
+      "jquery"
+      // "semantic-ui"
     ],
     "lib": [
       "es2018",
