@@ -57,6 +57,5 @@
     "typescript": "~3.1.6",
     "url-loader": "^1.1.2",
     "ng2-semantic-ui": "^0.9.7",
-    "typescript": "^3.1.6"
   }
 }
