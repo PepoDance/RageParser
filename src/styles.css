@@ -5,16 +5,16 @@ body {
   background: #283048;
   background: -webkit-linear-gradient(to right, #283048, #859398);
   background: linear-gradient(to right, #283048, #859398);
-  /* overflow: hidden; */
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
 .ui.menu .item img.logo {
-  margin-right: 1.5em !important;
+  margin-right: 1.5em;
 }
 
 .nav-item {
-  min-width: 140px !important;
+  min-width: 140px;
 }
 
 .parser {
@@ -42,4 +42,8 @@ body {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
   background-color: #555;
+}
+
+.ui.action.input input[type="file"] {
+  display: none;
 }
