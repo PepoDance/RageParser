@@ -1,70 +1,69 @@
-<div class="five wide column">
-  <div class="ui inverted segments">
-    <div class="ui blue inverted segment">
-      <h3 class="ui centered header">
-        Upload
-      </h3>
-    </div>
-    <div class="ui bottom attached inverted segment">
-      <div class="ui icon info message">
-        <img src="assets/img/feelsOkayMan.png" class="ui small image">
-        <div class="content">
-          <div class="header">
-            Heads up!
+<div class="ui two column centered grid">
+  <div class="five wide column">
+    <div class="ui inverted segments">
+      <div class="ui blue inverted segment">
+        <h3 class="ui centered header">
+          Upload
+        </h3>
+      </div>
+      <div class="ui bottom attached inverted segment">
+        <div class="ui icon info message">
+          <img src="assets/img/feelsOkayMan.png" class="ui small image">
+          <div class="content">
+            <div class="header">
+              Heads up!
+            </div>
+            <ul class="list">
+              <li>Please upload the <code>.storage</code> file.</li>
+              <li>You can usually find this in your Rage Multiplayer Installation, Client Resources, and the Server Address.</li>
+              <li>The <code>.storage</code> file isn't saved on the server and will be removed once you upload.</li>
+            </ul>
           </div>
-          <ul class="list">
-            <li>Please upload the <code>.storage</code> file.</li>
-            <li>You can usually find this in your Rage Multiplayer Installation, Client Resources, and the Server Address.</li>
-            <li>The <code>.storage</code> file isn't saved on the server and will be removed once you upload.</li>
-          </ul>
+        </div>
+        <div class="ui action fluid input">
+          <!-- <input type="text" placeholder="Path To File" readonly> -->
+          <input id="file" type="file" #storageFile accept=".storage">
+          <div id="uploadChatlog" (click)="upload(storageFile)" class="ui right labeled icon green basic button">
+            <i class="cloud upload alternate icon"></i> Upload
+          </div>
         </div>
       </div>
-      <div class="ui action fluid input">
-        <!-- <input type="text" placeholder="Path To File" readonly> -->
-        <input id="file" type="file" #storageFile accept=".storage">
-        <div id="uploadChatlog" (click)="upload(storageFile)" class="ui right labeled icon green basic button">
-          <i class="cloud upload alternate icon"></i> Upload
+    </div>
+  </div>
+
+  <div class="nine wide column">
+    <div class="ui segments">
+      <div class="ui blue inverted segment">
+        <h3 class="ui centered header">
+          Output
+        </h3>
+      </div>
+      <div id="chatlog" *ngIf="chatlog.length > 0" class="col-10">
+
+      </div>
+      <div id="chatOutput" class="ui inverted segment">
+        <div *ngIf="uploading" class="ui dimmer">
+          <div class="content">
+            <h2 class="ui inverted icon header">
+              <i class="notched circle loading icon"></i> Awaiting your chat log upload...
+            </h2>
+          </div>
+        </div>
+        <div *ngIf="chatlog.length > 0" class="left floated content">
+
+          <li *ngFor="let chat of chatlog">
+            <div [innerHTML]="chat.text | safeHtml">
+            </div>
+          </li>
+        </div>
+      </div>
+      <div class="ui bottom attached inverted segment">
+        <div class="ui right labeled icon green basic disabled fluid button">
+          <i class="cloud download alternate icon"></i> Download
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<div class="nine wide column">
-  <div class="ui segments">
-    <div class="ui blue inverted segment">
-      <h3 class="ui centered header">
-        Output
-      </h3>
-    </div>
-    <div id="chatlog" *ngIf="chatlog.length > 0" class="col-10">
-      
-    </div>
-    <div id="chatOutput" class="ui inverted segment">
-      <div *ngIf="uploading" class="ui dimmer">
-        <div class="content">
-          <h2 class="ui inverted icon header">
-            <i class="notched circle loading icon"></i> Awaiting your chat log upload...
-          </h2>
-        </div>
-      </div>
-      <div *ngIf="chatlog.length > 0" class="left floated content">
-
-        <li *ngFor="let chat of chatlog">
-          <div [innerHTML]="chat.text | safeHtml">
-          </div>
-        </li>
-      </div>
-    </div>
-    <div class="ui bottom attached inverted segment">
-      <div class="ui right labeled icon green basic disabled fluid button">
-        <i class="cloud download alternate icon"></i> Download
-      </div>
-    </div>
-  </div>
-</div>
-
-
-    
 
 <router-outlet></router-outlet>
